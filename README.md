@@ -1,6 +1,7 @@
 SSSRead
 =================
 ![snake](https://storage.googleapis.com/file-in.appspot.com/files/y7I9OfHKQM.png)
+
 Made by Sophia Mitchell, Kate North, Vienna Wyler, and Claire Wang!
 
 Link: [SSSREAD.ML](https://sssread.ml)
