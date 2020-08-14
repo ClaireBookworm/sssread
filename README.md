@@ -4,7 +4,7 @@ SSSRead
 
 Made by Sophia Mitchell, Kate North, Vienna Wyler, and Claire Wang!
 
-Link: [SSSREAD.ML](https://sssread.ml)
+[Find it here!](https://sssread.netlify.app)
 
 Sssread, Snakespeare's natural habitat, is a Google Chrome extension (complete with loads of Snakespeare appearances!) specifically designed to
             encourage students to read by gamifying 👾 the experince. On reputable and educational sites, students will receive 
