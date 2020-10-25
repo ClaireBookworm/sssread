@@ -19,6 +19,6 @@
 
 var forma = document.getElementById('id01');
 function myFunction() {
-  document.getElementById("id01").style.display="block";
   document.getElementById("sign").style.display="none";
+  document.getElementById("id01").style.display="block";
 }
