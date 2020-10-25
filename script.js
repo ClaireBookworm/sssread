@@ -18,3 +18,7 @@
 // btw i have no idea who those two people are maybe K and V...or K and C...or C and V *shrugs* - sophia
 
 var forma = document.getElementById('id01');
+function myFunction() {
+  document.getElementById("id01").style.display="block";
+  document.getElementById("sign").style.display="none";
+}
