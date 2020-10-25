@@ -12,6 +12,125 @@
       href="https://cdn.glitch.com/2fc84274-27c7-40bf-bf03-39a6b4e0ac98%2Fsmart-snek.png?v=1597436479026" />
 		<script src="jscode.js"></script>
 	</head>
+	<style>
+body {font-family: Avenir Next, Avenir system-ui; color: white; }
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  width: 100%;
+}
+
+
+/* Extra styles for the cancel button */
+.cancelbutton {
+  padding: 14px 20px;
+  background-color: #bf6856;
+}
+        .signupbutton {
+          color: white;
+          font-family: Avenir Next, Avenir system-ui;
+          background-color: #00A896;
+        }
+        .cancelbutton:hover {
+          transition-duration: 0.5s;
+          color: white;
+          background-color: #fcb603;
+        }
+        .signupbutton:hover {
+          transition-duration: 0.5s;
+          color: black;
+          background-color: #4944e3;
+        }
+/* Float cancel and signup buttons and add an equal width */
+.cancelbutton, .signupbutton {
+  float: left;
+  width: 50%;
+  font-size: 15px;
+}
+
+/* Add padding to container elements */
+.containerdos {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.formados {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 25%;
+  top: 25%;
+  width: 50%; /* Full width */
+  height: 50%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: white;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.formados-content {
+  background-color: #2f2f2f;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #2f2f2d;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #00A896;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
 	<body>
 		<section class="hero" style="background-color: #00a896 !important">
       <div class="hero-body">
@@ -83,7 +202,33 @@
           </ul>
       </nav>
     <br />
-    <nav>
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+<div id="id01" class="formados">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="formados-content" action="/action_page.php">
+    <div class="containerdos">
+      <h1>Log In</h1>
+      <p>Fill in this form to log in and check out your data! 🥳</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>  
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbutton">Stop</button>
+        <button type="submit" class="signupbutton">Log In</button>
+      </div>
+    </div>
+  </form>
+</div>
+    </section>
+	    <nav>
       <h1 style="text-align: center;">Whoopsss! This page is still under construction, continue at your own risssk 🤨....</h1>
     </nav>
     <div style="text-align: center;">
@@ -94,6 +239,5 @@
         <a href="index.html" class="indexfooterlink" >Sssread &#1421; 2020</a>
         <a class="questionslink" href="mailto:sophia.m.mitchell@icloud.com?subject=Questions&nbsp;About&nbsp;Sssread" style="text-align: center; margin-left: 0; margin-right: 0; padding-left: 42%; padding-right: 0;">Questions?</a>
       </div>
-    </section>
 	</body>
 </html>
