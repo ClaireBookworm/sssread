@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Sssread Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+        <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <link rel="icon" 
+      type="image/png" 
+      href="https://cdn.glitch.com/2fc84274-27c7-40bf-bf03-39a6b4e0ac98%2Fsmart-snek.png?v=1597436479026" />
+    <meta charset="UTF-8" />
+    <style>
+      
+      input[type=text], input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+      }
+      input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      .cancelbutton {
+        padding: 14px 20px;
+        background-color: #bf6856;
+        font-family: Avenir Next, Avenir system-ui;
+      }
+        .signupbutton {
+          color: white;
+          font-family: Avenir Next, Avenir system-ui;
+          background-color: #00A896;
+        }
+        .cancelbutton:hover {
+          transition-duration: 0.5s;
+          color: white;
+          background-color: #fcb603;
+        }
+        .signupbutton:hover {
+          transition-duration: 0.5s;
+          color: black;
+          background-color: #4944e3;
+        }
+      .cancelbutton, .signupbutton {
+        float: left;
+        width: 50%;
+        font-size: 15px;
+      }
+      .container {
+        padding: 16px;
+      }
+      .forma {
+        position: fixed; 
+        z-index: 1; 
+        left: 25%;
+        top: 35%;
+        width: 50%;
+        height: 50%; 
+        overflow: auto; 
+        background-color: white;
+      }
+      .forma-content {
+        background-color: #2f2f2f;
+        margin: 5% auto 15% auto; 
+        border: 1px solid #2f2f2f;
+        width: 80%; 
+      }
+      hr {
+        border: 1px solid #00A896;
+        margin-bottom: 25px;
+      }   
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+        button {
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          width: 100%;
+        }
+      @media screen and (max-width: 300px) {
+        .cancelbtn, .signupbtn {
+           width: 100%;
+        }
+      }
+
+
+    </style>
+    </head>
+    <body>
+        <section class="hero" style="background-color: #00a896 !important">
+      <div class="hero-body">
+        <p class="title-head">Sssread</p>
+        <span
+          ><h3 class="homeof" style="color: white; text-align: center;">
+            The home of hungriest (and friendliest) book worm you'll ever meet.
+          </h3></span
+        >
+        <br />
+        <h2 class="banner animate" style="color: white;">
+          <a href="getitnow.html" class="neon">Focus. Read. Repeat.</a>
+        </h2>
+      </div>
+    </section>
+  <br />
+      <nav
+        style="background-color: #00A896 position: fixed; top: 120px left: 0; right: 0; width: 100%; display: flex; align-items: center; z-index: 25;"
+      >
+          <ul class="navigation" style="margin-left: auto; margin-right: auto;">
+            <li>
+              <div style="text-align: center; float: left; padding-left: 3px; padding-right: 3px;">
+                <button class="button">
+                  <a class="navlink" href="index.html">Home</a>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div style="text-align: center; float: left; padding-left: 3px; padding-right: 3px;">
+                <button class="button">
+                  <a class="navlink" href="evolution.html">Evolution</a>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div style="text-align: center; float: left; padding-left: 3px; padding-right: 3px;">
+                <button class="button">
+                  <a class="navlink" href="demonstration.html">Demonstration</a>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div style="text-align: center; float: left; padding-left: 3px; padding-right: 3px;">
+                <button class="button">
+                  <a class="navlink" href="signinexample.html">Sign in Example</a>
+                </button> 
+              </div>
+            </li>
+            <li>
+              <div style="text-align: center; float: left; padding-left: 3px; padding-right: 3px;">
+                <button class="button">
+                  <a class="navlink" href="getitnow.html">Get Now!</a>
+                </button> 
+              </div>
+            </li>
+          </ul>
+      </nav>
+      <nav>
+       <h1 style="text-align: center;">Warning: This page is still under construction. Continue at your own risssk.</h1>
+      </nav>
+      <div class="forma">
+        <form class="forma-content" action="/action_page.php">
+          <div class="container">
+            <h1 style="color: white;">Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label for="email" style="color: white;"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <label for="psw" style="color: white;"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <label for="psw-repeat" style="color: white;"> <b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required> 
+            <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px;"> Remember me
+            </label>
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbutton">Cancel</button>
+              <button type="button" class="signupbutton">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+  </body>
+</html>
+
+
