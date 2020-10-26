@@ -10,54 +10,7 @@
     <link rel="icon" 
       type="image/png" 
       href="https://cdn.glitch.com/2fc84274-27c7-40bf-bf03-39a6b4e0ac98%2Fsmart-snek.png?v=1597436479026" />
-		<script>
-			function hash(inp) {
-				return inp;
-			}
-			function login1() {
-    var uname = document.getElementsByName("username")[0].value;
-    var pword = document.getElementsByName("psw")[0].value;
-
-    var cooks = document.cookie;
-    var c = [cooks.indexOf("username="), cooks.indexOf("password=")];
-    c[0] = cooks.substring((c[0]+9), cooks.length);
-    c[1] = cooks.substring((c[1]+9), cooks.length);
-    c[0] = c[0].substring(0, c[0].indexOf(";"));
-    c[1] = c[1].substring(0, c[1].indexOf(";"));
-
-    var myBool = (hash(uname) == c[0]);
-    if ((hash(pword) == c[1]) && myBool) {
-	myBool = true;
-    } else {
-	myBool = false;
-    }
-
-    if (myBool) {
-	alert("Successfully logged in!\nWelcome back " + uname);
-    } else {
-	alert("Incorrect username and/or password! Try again!");
-    }
-}
-
-function login2() {
-    var uname = document.getElementsByName("username")[0].value;
-    var pword = document.getElementsByName("psw")[0].value;
-
-    var myBool = (hash(uname).toString() == (localStorage.getItem("username")));
-
-    if ((hash(pword).toString() == (localStorage.getItem("password"))) && myBool) {
-	myBool = true;
-    } else {
-	myBool = false;
-    }
-
-    if (myBool = true) {
-	alert("Successfully logged in!\nWelcome back " + uname + "! Now, go do some reading! 📚");
-    } else {
-	alert("Incorrect username and/or password...Snakespeare is sad 😭");
-    }
-}
-		</script>
+		<script src="script.js"></script>
 	</head>
 	<style>
 body {font-family: Avenir Next, Avenir system-ui; color: white; }
