@@ -40,7 +40,7 @@ function signUp2() {
 }
 
 
-function login1() {
+			function login1() {
     var uname = document.getElementsByName("username")[0].value;
     var pword = document.getElementsByName("psw")[0].value;
 
