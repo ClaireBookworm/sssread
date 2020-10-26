@@ -13,7 +13,13 @@
       href="https://cdn.glitch.com/2fc84274-27c7-40bf-bf03-39a6b4e0ac98%2Fsmart-snek.png?v=1597436479026" />
     <meta charset="UTF-8" />
     <script>
-	    function signUp() {
+	    function signUp1() {
+		    var uname = document.getElementsByName("username")[0].value;
+    console.log(document.getElementsByName("username")[0].value)
+    var pword = document.getElementsByName("psw")[0].value;
+    document.cookie = "username="+encodeURIComponent(hash(uname))+"; path=/; max-age=31536000";
+    document.cookie = "password="+encodeURIComponent(hash(uname))+"; path=/; max-age=31536000";
+    var signalert = "You've signed up! Snakespeare is happy 🥰";
     window.alert("You've signed up! Snakespeare is happy");
 }
 	  </script>
@@ -189,7 +195,7 @@
             </label>
             <div class="clearfix">
               <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbutton">Cancel</button>
-              <button type="button" class="signupbutton" onclick="signUp()">Sign Up</button>
+              <button type="button" class="signupbutton" onclick="signUp1()">Sign Up</button>
             </div>
           </div>
         </form>
