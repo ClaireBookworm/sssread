@@ -10,7 +10,11 @@
     <link rel="icon" 
       type="image/png" 
       href="https://cdn.glitch.com/2fc84274-27c7-40bf-bf03-39a6b4e0ac98%2Fsmart-snek.png?v=1597436479026" />
-		<script src="script.js"></script>
+		<script>
+			function clicky() {
+				window.location.href = "sssread.netlify.app/index.html";
+			}
+		</script>
 	</head>
 	<style>
 body {font-family: Avenir Next, Avenir system-ui; color: white; }
@@ -229,7 +233,7 @@ hr {
       <input type="password" placeholder="Enter Password" name="psw" required>
       <div class="clearfix">
 	<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbutton">Cancel</button>
-        <button type="submit" class="signupbutton" onclick="window.location.href = "sssread.netlify.app/index.html";">Log In</button>
+        <button type="submit" class="signupbutton" onclick="clicky()">Log In</button>
       </div>
     </div>
   </form>
