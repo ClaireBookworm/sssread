@@ -16,7 +16,7 @@
 //yeah, I have no idea
 
 // btw i have no idea who those two people are maybe K and V...or K and C...or C and V *shrugs* - sophia
-function signUp1 () {
+function signUp1() {
     var uname = document.getElementsByName("username")[0].value;
     var pword = document.getElementsByName("psw")[0].value;
     document.cookie = "username="+encodeURIComponent(hash(uname))+"; path=/; max-age=31536000";
