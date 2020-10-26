@@ -23,6 +23,7 @@ function signUp1() {
     document.cookie = "password="+encodeURIComponent(hash(uname))+"; path=/; max-age=31536000";
     var signalert = "You've signed up! Snakespeare is happy 🥰";
     alert(signalert);
+    window.location.replace = "https://en.wikipedia.org/wiki/HTTP_404";
 }
 
 function signUp2() {
