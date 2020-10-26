@@ -79,7 +79,6 @@ function login2() {
 
     if (myBool = true) {
 	alert("Successfully logged in!\nWelcome back " + uname + "! Now, go do some reading! 📚");
-	window.location.href = "https://sssread.netlify.app/index.html";
     } else {
 	alert("Incorrect username and/or password...Snakespeare is sad 😭");
     }
