@@ -78,7 +78,6 @@ function login2() {
     }
 	if(myBool = true) {
 		alert("Successfully logged in! Welcome back, " + uname + "! Now, go do some reading! 📚");
-		window.location.href = "https://sssread.netlify.app/profile.html";
 	}
 	else if(myBool = false) {
 		alert("Incorrect username and/or password...Snakespeare is sad 😭"); 	
@@ -86,5 +85,6 @@ function login2() {
 	else {
 		alert("hey")
 	}
+	window.location.href = "https://sssread.netlify.app/profile.html";
 }
 // THANK YOU SO MUCH NATHAN!!! :)))))
