@@ -21,6 +21,7 @@ function signUp1() {
     var pword = document.getElementsByName("psw")[0].value;
     document.cookie = "username="+encodeURIComponent(hash(uname))+"; path=/; max-age=31536000";
     document.cookie = "password="+encodeURIComponent(hash(uname))+"; path=/; max-age=31536000";
+    alert("You've signed up! Snakespeare is happy :-)");
 }
 
 function signUp2() {
