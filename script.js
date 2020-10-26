@@ -78,10 +78,10 @@ function login2() {
 	myBool = false;
     }
 
-    if (myBool) {
-	alert("Successfully logged in!\nWelcome back " + uname);
+    if (myBool = true) {
+	alert("Successfully logged in!\nWelcome back " + uname + "! Now, go do some reading! 📚");
     } else {
-	alert("Incorrect username and/or password! Try again!");
+	alert("Incorrect username and/or password...Snakespeare is sad 😭");
     }
 }
 // THANK YOU SO MUCH NATHAN!!! :)))))
