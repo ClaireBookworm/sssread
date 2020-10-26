@@ -18,7 +18,6 @@
 // btw i have no idea who those two people are maybe K and V...or K and C...or C and V *shrugs* - sophia
 
 function hash(inp) {
-    inp = encodeURIComponent(inp);
     return inp;
 }
 
