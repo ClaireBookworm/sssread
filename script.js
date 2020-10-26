@@ -77,7 +77,7 @@ function login2() {
 	myBool = false;
     }
 	if(myBool = true) {
-		alert("Successfully logged in! Welcome back " + uname + "! Now, go do some reading! 📚");
+		alert("Successfully logged in! Welcome back, " + uname + "! Now, go do some reading! 📚");
 	}
 	else if(myBool = false) {
 		alert("Incorrect username and/or password...Snakespeare is sad 😭"); 	
