@@ -16,9 +16,3 @@
 //yeah, I have no idea
 
 // btw i have no idea who those two people are maybe K and V...or K and C...or C and V *shrugs* - sophia
-
-var forma = document.getElementById('id01');
-function myFunction(sign, state) {
-  document.getElementById('sign').style.display='none';
-  document.getElementById('id01').style.display='block';
-}
