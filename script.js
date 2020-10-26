@@ -73,14 +73,10 @@ function login2() {
 
     if ((hash(pword).toString() == (localStorage.getItem("password"))) && myBool) {
 	myBool = true;
-    } else {
-	myBool = false;
-    }
-
-    if (myBool = true) {
 	alert("Successfully logged in! Welcome back " + uname + "! Now, go do some reading! 📚");
     } else {
-	alert("Incorrect username and/or password...Snakespeare is sad 😭");
+	myBool = false;
+	alert("Incorrect username and/or password...Snakespeare is sad 😭"); 
     }
 }
 // THANK YOU SO MUCH NATHAN!!! :)))))
