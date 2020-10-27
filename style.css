@@ -80,8 +80,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding-left: 40%;
-  padding-right: 40%;
+  margin-left: 40%;
+  margin-right: 40%;
   padding-bottom: 0;
 }
 .indexfooterlink:hover {
