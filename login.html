@@ -10,77 +10,8 @@
     <link rel="icon" 
       type="image/png" 
       href="https://cdn.glitch.com/2fc84274-27c7-40bf-bf03-39a6b4e0ac98%2Fsmart-snek.png?v=1597436479026" />
-		<script>function hash(inp) {
-    return inp;
-}
 
-function signUp1() {
-    var uname = document.getElementsByName("username")[0].value;
-    console.log(document.getElementsByName("username")[0].value)
-    var pword = document.getElementsByName("psw")[0].value;
-    document.cookie = "username="+encodeURIComponent(hash(uname))+"; path=/; max-age=31536000";
-    document.cookie = "password="+encodeURIComponent(hash(uname))+"; path=/; max-age=31536000";
-    var signalert = "You've signed up! Snakespeare is happy ðŸ¥°";
-    alert(signalert);
-    window.location.replace = "https://en.wikipedia.org/wiki/HTTP_404";
-}
-
-function signUp2() {
-    var uname = document.getElementsByName("username")[0].value;
-    var pword = document.getElementsByName("psw")[0].value;     
-    localStorage.setItem("username", encodeURIComponent(hash(uname)));
-    localStorage.setItem("password", encodeURIComponent(hash(uname)));
-}
-
-
-			function login1() {
-    var uname = document.getElementsByName("username")[0].value;
-    var pword = document.getElementsByName("psw")[0].value;
-
-    var cooks = document.cookie;
-    var c = [cooks.indexOf("username="), cooks.indexOf("password=")];
-    c[0] = cooks.substring((c[0]+9), cooks.length);
-    c[1] = cooks.substring((c[1]+9), cooks.length);
-    c[0] = c[0].substring(0, c[0].indexOf(";"));
-    c[1] = c[1].substring(0, c[1].indexOf(";"));
-
-    var myBool = (hash(uname) == c[0]);
-    if ((hash(pword) == c[1]) && myBool) {
-	myBool = true;
-    } else {
-	myBool = false;
-    }
-
-    if (myBool) {
-	alert("Successfully logged in!\nWelcome back " + uname);
-    } else {
-	alert("Incorrect username and/or password! Try again!");
-    }
-}
-
-function login2() {
-    var uname = document.getElementsByName("username")[0].value;
-    var pword = document.getElementsByName("psw")[0].value;
-
-    var myBool = (hash(uname).toString() == (localStorage.getItem("username")));
-
-    if ((hash(pword).toString() == (localStorage.getItem("password"))) && myBool) {
-	myBool = true;
-    } else {
-	myBool = false;
-    }
-	if(myBool = true) {
-		alert("Successfully logged in! Welcome back, " + uname + "! Before you exit out of this, enter this link into your search bar: https://sssread.netlify.app/profile.html Now, go do some reading! 📚");
-	window.location.href = "https://sssread.netlify.app/profile.html";
-	}
-	else if(myBool = false) {
-		alert("Incorrect username and/or password...Snakespeare is sad 😭"); 	
-	}
-	else {
-		alert("hey")
-	}
-}
-// THANK YOU SO MUCH NATHAN!!! :)))))</script>
+<script href="script.js"></script>
 	</head>
 	<style>
 body {font-family: Avenir Next, Avenir system-ui; color: white; }
@@ -286,9 +217,9 @@ hr {
     </nav>
       <button id="sign" onclick="document.getElementById('id01').style.display='block'" style="width: 30%; text-align: center; background-color: #00A896; color: white; align-items: center; margin-left: 35%; margin-right: 35%; font-size: 20px; font-family: Avenir Next, Avenir system-ui;" class="signingup">Log In</button>
 
-<div id="id01" class="formados" action="profile.html">
+<div id="id01" class="formados">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="formados-content">
+  <form class="formados-content" action="profile.html">
     <div class="containerdos">
       <h1>Log In</h1>
       <p>Fill in this form to log in and check out your data! 🥳</p>
