@@ -66,7 +66,7 @@ function signUp2() {
     }
 }
 
-function login2() {
+function login2(form) {
     var uname = document.getElementsByName("username")[0].value;
     var pword = document.getElementsByName("psw")[0].value;
 
