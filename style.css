@@ -39,6 +39,8 @@
 }
 .accountlink {
   color: #4944e3;
+  padding-left: 46%;
+  padding-right: 46%;
 }
 .accountlink:hover {
   transition-duration: 0.6s;
