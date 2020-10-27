@@ -60,9 +60,9 @@ function signUp2() {
     }
 
     if (myBool) {
-	alert("Successfully logged in!\nWelcome back " + uname);
+	alert("Successfully logged in! Welcome back, " + uname + "! If you want to access your profile, go to https://sssread.netlify.app/profile.html. Now, go do some reading! 📚");
     } else {
-	alert("Incorrect username and/or password! Try again!");
+	alert("Incorrect username and/or password...Snakespeare is sad 😭");
     }
 }
 
