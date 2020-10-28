@@ -55,13 +55,13 @@ function login1() {
     }
 
     if (myBool) {
-	alert("Successfully logged in! Welcome back, " + uname + "! If you want to access your profile, go to https://sssread.netlify.app/profile.html. Now, go do some reading! Ã°Å¸â€œÅ¡");
+	alert("Successfully logged in! Welcome back, " + uname + "! Now, go do some reading! 📚");
 	document.cookie = "login=; path=/; expires=Thu 01 Jan 1970 00:00:00 GMT";
 	document.cookie = "login="+encodeURIComponent(uname)+"; path=/; max-age=2419200";
     } else if (myBool = false) {
-	alert("Your username and/or password is incorrect...maybe you put a blank space in one of the fields...Snakespeare is sad Ã°Å¸ËœÂ­");
+	alert("Your username and/or password is incorrect...maybe you put a blank space in one of the fields...Snakespeare is sad 😭");
     } else {
-	 alert("You shouldn't be getting this alert....uh oh Ã°Å¸Ëœâ€“");   
+	 alert("You shouldn't be getting this alert....uh oh 😖");   
     }
 	return uname;
 	return pword;
