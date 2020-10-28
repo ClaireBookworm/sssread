@@ -85,5 +85,7 @@ function login2(form) {
 	else {
 		alert("If you're redirected to your profile after you close this alert, then congrats! Go do some reading! 📚 /n If you aren't, your username and/or password is incorrect...Snakespeare is sad 😭"); 	
 	}
+	return uname;
+	return pword;
 }
 // THANK YOU SO MUCH NATHAN!!! :)))))
