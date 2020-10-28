@@ -53,7 +53,7 @@ function login1() {
     } else {
 	myBool = false;
     }
-    if (uname = "" && pword = "") {
+    if (uname == "" && pword == "") {
 	alert("Uhh...you know you have to fill the form out, right? 🤪"); 
     }
 
