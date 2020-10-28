@@ -56,7 +56,7 @@ function login1() {
 
     if (myBool) {
 	alert("Successfully logged in! Welcome back, " + uname + "! If you want to access your profile, go to https://sssread.netlify.app/profile.html. Now, go do some reading! ðŸ“š");
-	document.cookie = "login=; path=/; expires=Thu 01 Jan 1970 00:00:00 GMT";
+	document.cookie = "login=; path=/; expires=Thu 01 Jan 2100 00:00:00 GMT";
 	document.cookie = "login="+encodeURIComponent(uname)+"; path=/; max-age=2419200";
     } else if (myBool = false) {
 	alert("Your username and/or password is incorrect...maybe you put a blank space in one of the fields...Snakespeare is sad ðŸ˜­");
