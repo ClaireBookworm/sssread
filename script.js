@@ -55,7 +55,7 @@ function signUp2() {
     c[1] = c[1].substring(0, c[1].indexOf(";"));
 
     var myBool = (hash(uname) == c[0]);
-    if ((hash(pword) == c[1]) && (has(uname) == c[0])) {
+    if ((hash(pword) == c[1]) && myBool) {
 	myBool = true;
     } else {
 	myBool = false;
