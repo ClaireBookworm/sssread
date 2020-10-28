@@ -54,17 +54,21 @@ function login1() {
 	myBool = false;
     }
     if (uname == "" && pword == "") {
-	alert("Uhh...you know you have to fill the form out, right? 🤪"); 
+	var fillformoutpls = "Uhh...you know you have to fill the form out, right? 🤪";
+	    alert(fillformoutpls); 
     }
 
     if (myBool) {
-	alert("Successfully logged in! Welcome back, " + uname + "! Now, go do some reading! 📚");
+	var readingtime = "Successfully logged in! Welcome back, " + uname + "! Now, go do some reading! 📚";
+	alert(readingtime);
 	document.cookie = "login=; path=/; expires=Thu 01 Jan 1970 00:00:00 GMT";
 	document.cookie = "login="+encodeURIComponent(uname)+"; path=/; max-age=2419200";
     } else if (myBool = false) {
-	alert("Your username and/or password is incorrect...maybe you put a blank space in one of the fields...Snakespeare is sad 😭");
+	var sadsnake = "Your username and/or password is incorrect...maybe you put a blank space in one of the fields...Snakespeare is sad 😭"
+	    alert(sadsnake);
     } else {
-	 alert("You shouldn't be getting this alert....uh oh 😖");   
+	 var uhoh = "You shouldn't be getting this alert....uh oh 😖";
+	 alert(uhoh);   
     }
 	return uname;
 	return pword;
