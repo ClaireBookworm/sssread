@@ -40,9 +40,6 @@ function signUp1() {
 }
 
 function login1() {
-        var uname = document.getElementsByName("username")[0].value;
-    console.log(document.getElementsByName("username")[0].value)
-    var pword = document.getElementsByName("psw")[0].value;
     var cooks = document.cookie;
     var c = [cooks.indexOf("username="), cooks.indexOf("password=")];
     c[0] = cooks.substring((c[0]+9), cooks.length);
