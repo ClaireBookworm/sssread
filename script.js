@@ -31,6 +31,8 @@ function signUp1() {
     var signalert = "You've signed up! Snakespeare is happy ðŸ¥°";
     alert(signalert);
     window.location.replace = "https://en.wikipedia.org/wiki/HTTP_404";
+    return uname;
+    return pword;
 }
 
 function signUp2() {
@@ -42,9 +44,6 @@ function signUp2() {
 
 
 			function login1() {
-    var uname = document.getElementsByName("username")[0].value;
-    var pword = document.getElementsByName("psw")[0].value;
-
     var cooks = document.cookie;
     var c = [cooks.indexOf("username="), cooks.indexOf("password=")];
     c[0] = cooks.substring((c[0]+9), cooks.length);
@@ -53,7 +52,7 @@ function signUp2() {
     c[1] = c[1].substring(0, c[1].indexOf(";"));
 
     var myBool = (hash(uname) == c[0]);
-    if ((hash(pword) == c[0]) && myBool) {
+    if ((hash(pword) == c[1]) && myBool) {
 	myBool = true;
     } else {
 	myBool = false;
