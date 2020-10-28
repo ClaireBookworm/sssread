@@ -53,6 +53,9 @@ function login1() {
     } else {
 	myBool = false;
     }
+    if (uname = "" && pword = "") {
+	alert("Uhh...you know you have to fill the form out, right? 🤪"); 
+    }
 
     if (myBool) {
 	alert("Successfully logged in! Welcome back, " + uname + "! If you want to access your profile, go to https://sssread.netlify.app/profile.html. Now, go do some reading! Ã°Å¸â€œÅ¡");
