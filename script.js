@@ -28,7 +28,7 @@ function signUp1() {
     var pword = document.getElementsByName("psw")[0].value;
     document.cookie = "username="+encodeURIComponent(hash(uname))+"; path=/; max-age=31536000";
     document.cookie = "password="+encodeURIComponent(hash(uname))+"; path=/; max-age=31536000";
-    var signalert = "You've signed up! Snakespeare is happy ÃƒÂ°Ã…Â¸Ã‚Â¥Ã‚Â°";
+    var signalert = "You've signed up! Snakespeare is happy 🤗";
     alert(signalert);
     document.cookie = "login=; path=/; expires=Fri 01 Jan 2100 00:00:00 GMT";
     if (document.getElementsByName("remember")[0].checked) {
@@ -58,13 +58,13 @@ function login1() {
     }
 
     if (myBool) {
-	alert("Successfully logged in! Welcome back, " + uname + "! If you want to access your profile, go to https://sssread.netlify.app/profile.html. Now, go do some reading! Ã°Å¸â€œÅ¡");
+	alert("Successfully logged in! Welcome back, " + uname + "! Now, go do some reading! 📚");
 	document.cookie = "login=; path=/; expires=Thu 01 Jan 1970 00:00:00 GMT";
 	document.cookie = "login="+encodeURIComponent(uname)+"; path=/; max-age=2419200";
     } else if (myBool = false) {
-	alert("Your username and/or password is incorrect...maybe you put a blank space in one of the fields...Snakespeare is sad Ã°Å¸ËœÂ­");
+	alert("Your username and/or password is incorrect...maybe you put a blank space in one of the fields...Snakespeare is sad 😭");
     } else {
-	 alert("You shouldn't be getting this alert....uh oh Ã°Å¸Ëœâ€“");   
+	 alert("You shouldn't be getting this alert....uh oh 😖");   
     }
 	return uname;
 	return pword;
