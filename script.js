@@ -30,7 +30,7 @@ function signUp1() {
     document.cookie = "password="+encodeURIComponent(hash(uname))+"; path=/; max-age=31536000";
     var signalert = "You've signed up! Snakespeare is happy Ã°Å¸Â¥Â°";
     alert(signalert);
-    document.cookie = "login=; path=/; expires=Thu 01 Jan 1970 00:00:00 GMT";
+    document.cookie = "login=; path=/; expires=Fri 01 Jan 1970 00:00:00 GMT";
     if (document.getElementsByName("remember")[0].checked) {
 	document.cookie = "login="+encodeURIComponent(uname)+"; path=/; max-age=2419200";
     }
