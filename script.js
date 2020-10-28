@@ -53,17 +53,21 @@ function signUp2() {
     c[1] = c[1].substring(0, c[1].indexOf(";"));
 
     var myBool = (hash(uname) == c[0]);
-    if ((hash(pword) == c[1]) && myBool) {
+    if ((hash(pword) == c[0]) && myBool) {
 	myBool = true;
     } else {
 	myBool = false;
     }
 
-    if (myBool) {
+    if (myBool = true) {
 	alert("Successfully logged in! Welcome back, " + uname + "! If you want to access your profile, go to https://sssread.netlify.app/profile.html. Now, go do some reading! 📚");
-    } else {
+    } else if (myBool = false) {
 	alert("If you're redirected to your profile after you close this alert, then congrats, and welcome back, " + uname + "! Go do some reading! 📚 \n\nIf you aren't, your username and/or password is incorrect...maybe you put a blank space in any of the fields...Snakespeare is sad 😭");
+    } else {
+	 alert("You shouldn't be getting this alert....uh oh 😖");   
     }
+	return uname;
+	return pword;
 }
 
 function login2(form) {
