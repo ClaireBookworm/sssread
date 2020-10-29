@@ -27,7 +27,7 @@ function signUp1() {
     console.log(document.getElementsByName("username")[0].value)
     var pword = document.getElementsByName("psw")[0].value;
     document.cookie = "username="+encodeURIComponent(hash(uname))+"; path=/; max-age=31536000";
-    document.cookie = "password="+encodeURIComponent(hash(uname))+"; path=/; max-age=31536000";
+    document.cookie = "password="+encodeURIComponent(hash(pword))+"; path=/; max-age=31536000";
     var signalert = "You've signed up! Snakespeare is happy 🤗";
     alert(signalert);
     document.cookie = "login=; path=/; expires=Fri 01 Jan 2100 00:00:00 GMT";
