@@ -28,29 +28,19 @@
         background-color: #ddd;
         outline: none;
       }
-      .cancelbutton {
-        padding: 14px 20px;
-        background-color: #bf6856;
-        font-family: Avenir Next, Avenir system-ui;
-      }
         .signupbutton {
           color: white;
           font-family: Avenir Next, Avenir system-ui;
           background-color: #00A896;
-        }
-        .cancelbutton:hover {
-          transition-duration: 0.5s;
-          color: white;
-          background-color: #fcb603;
         }
         .signupbutton:hover {
           transition-duration: 0.5s;
           color: black;
           background-color: #4944e3;
         }
-      .cancelbutton, .signupbutton {
+      .signupbutton {
         float: left;
-        width: 50%;
+        width: 100%;
         font-size: 15px;
       }
       .container {
@@ -182,7 +172,7 @@
               <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px;"> Remember me
             </label>
             <div class="clearfix">
-              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbutton">Cancel</button>
+              
               <button type="button" class="signupbutton" onclick="signUp1()">Sign Up</button>
             </div>
           </div>
