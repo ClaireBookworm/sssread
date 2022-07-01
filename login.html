@@ -7,6 +7,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
     />
+    <script src="https://rawgit.com/kawanet/msgpack-lite/master/dist/msgpack.min.js"></script>
     <link rel="icon" 
       type="image/png" 
       href="https://cdn.glitch.com/2fc84274-27c7-40bf-bf03-39a6b4e0ac98%2Fsmart-snek.png?v=1597436479026" />
@@ -19,36 +20,22 @@ body {font-family: Avenir Next, Avenir system-ui; color: white; }
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-/* Add a background color when the inputs get focus */
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for all buttons */
-button {
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  width: 100%;
-}
-
-
-/* Extra styles for the cancel button */
-.cancelbutton {
-  padding: 14px 20px;
-  background-color: #bf6856;
-  font-family: Avenir Next, Avenir system-ui;
-}
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+      }
+      input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      .cancelbutton {
+        padding: 14px 20px;
+        background-color: #bf6856;
+        font-family: Avenir Next, Avenir system-ui;
+      }
         .signupbutton {
           color: white;
           font-family: Avenir Next, Avenir system-ui;
@@ -56,7 +43,7 @@ button {
         }
         .cancelbutton:hover {
           transition-duration: 0.5s;
-          color: black;
+          color: white;
           background-color: #fcb603;
         }
         .signupbutton:hover {
@@ -64,82 +51,43 @@ button {
           color: black;
           background-color: #4944e3;
         }
-/* Float cancel and signup buttons and add an equal width */
-.cancelbutton, .signupbutton {
-  float: left;
-  width: 50%;
-  font-size: 15px;
-}
+      .cancelbutton, .signupbutton {
+        float: left;
+        width: 50%;
+        font-size: 15px;
+      }
+      .container {
+	padding: 16px;
+      }
+      .forma {
+	position: absolute;
+        left: 25%;
+        width: 50%;
+        height: 50%; 
+        background-color: white;
+	overflow: auto;
+      }
+      .forma-content {
+        background-color: #2f2f2f;
+        margin: 5% auto 15% auto; 
+        border: 1px solid #2f2f2f;
+        width: 80%; 
+      }
+      hr {
+        border: 1px solid #00A896;
+      }   
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+        button {
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          width: 100%;
+        }
 
-/* Add padding to container elements */
-.containerdos {
-  padding: 16px;
-}
-
-/* The Modal (background) */
-.formados {
-  display: none; /* Hidden by default */
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 35%;
-  right: 35%;
-  top: 25%;
-  margin-top: 12%;
-  width: 30%; /* Full width */
-  height: 50%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: transparent;
-  padding-top: 50px;
-}
-
-/* Modal Content/Box */
-.formados-content {
-  background-color: #2f2f2f;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #2f2f2d;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* Style the horizontal ruler */
-hr {
-  border: 1px solid #00A896;
-}
- 
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 35px;
-  top: 15px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-  color: #bf6856;
-  cursor: pointer;
-}
-
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-		
-.signingup:hover {
-	transition-duration: 0.5s;
-	background-color: #4944e3;
-	color: black;
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-     width: 100%;
-  }
-}
 </style>
 	<body>
 		<section class="hero" style="background-color: #00a896 !important">
@@ -212,35 +160,34 @@ hr {
           </ul>
       </nav>
     <br />
-	    <nav>
-      <h1 style="text-align: center; color: black; background-color: white; margin-bottom: 1%;">Whoopsss! This page is still under construction, continue at your own risssk 🤨....</h1>
-    </nav>
-      <button id="sign" onclick="document.getElementById('id01').style.display='block'" style="width: 30%; text-align: center; background-color: #00A896; color: white; align-items: center; margin-left: 35%; margin-right: 35%; font-size: 20px; font-family: Avenir Next, Avenir system-ui;" class="signingup">Log In</button>
-
-<div id="id01" class="formados">
-  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="formados-content" action="profile.html">
-    <div class="containerdos">
+    <div class="forma">
+  <div class="forma-content">      
+    <div class="container">
       <h1>Log In</h1>
       <p>Fill in this form to log in and check out your data! 🥳</p>
       <hr>
       <label for="email"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="username" required>
+      <input id="username" type="text" placeholder="Enter Username" name="username" required>
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input id="password" type="password" placeholder="Enter Password" name="psw" required>
       <div class="clearfix">
 	<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbutton">Cancel</button>
         <button type="submit" class="signupbutton" onclick="login1()">Log In</button>
       </div>
+          </div>
+      </div>
     </div>
-  </form>
-</div>
-    </section>
-	    <section class="footer has-background-dark" style="position: fixed; bottom: 0; left: 0; right: 0;">
+	    <div style="text-align: center; padding-top: 50%;">
+	<img src="https://cdn.glitch.com/2fc84274-27c7-40bf-bf03-39a6b4e0ac98%2FScreen%20Shot%202020-08-14%20at%2016.35.28.png?v=1597437347386" style="width: 30%;" />
+    </div>
+	    <section class="footer has-background-dark" style="bottom: 0; left: 0; right: 0;>
       <div class="content">
         <a href="index.html" class="indexfooterlink" >Sssread &#1421; 2020</a>
         <a class="questionslink" href="mailto:sophia.m.mitchell@icloud.com?subject=Questions&nbsp;About&nbsp;Sssread">Questions?</a>
       </div>
     </section>
-	</body>
+  </body>
 </html>
+
+
+
