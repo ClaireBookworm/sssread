@@ -17,7 +17,70 @@
 //yeah, I have no idea
 
 // btw i have no idea who those two people are maybe K and V...or K and C...or C and V *shrugs* - sophia
+let ws = new WebSocket(location.origin.replace(/^http/, 'ws'));
+let loginKey = null;
+ws.binaryType = "arraybuffer"
+ws.onopen = () => {
+  console.log("WS OPENED")
+}
 
+function signUp1() {
+  let emailValue = document.getElementsByName("email")[0].value;
+  let usernameValue = document.getElementsByName("username")[0].value;
+  let passwordValue = document.getElementsByName("psw")[0].value;
+  let passwordValue2 = document.getElementsByName("psw-repeat")[0].value;
+  if (usernameValue.length < 1){
+    alert("You need to have a username 🤪")
+  } else if (passwordValue.length < 1){
+    alert("You need to have a password 😎")
+  } else if (passwordValue != passwordValue2){
+    alert("Oops! Your passwords do not match 😱")
+  } else if (passwordValue.length < 5){
+    alert("Please make your password longer so that its safe 🧐")
+  } else{
+  ws.send(msgpack.encode({
+    type: "register",
+    email: emailValue,
+    username: usernameValue,
+    password: passwordValue,
+  }));
+  }
+
+    //time to do some magic.!!!!!!!!!!!!!!
+}
+
+function login1() {
+  let username = document.getElementById('username').value;
+  let password = document.getElementById('password').value;
+  ws.send(msgpack.encode({
+    type: "login",
+    username: username,
+    password: password
+  }))
+}
+
+ws.addEventListener("message", ( datas ) => {
+  const msg = msgpack.decode(new Uint8Array(datas.data));
+  if (msg.type == "registerFailure"){
+    alert("Register failed. Reason: "+msg.reason)
+  }
+  else if (msg.type == "registerSuccess"){
+    alert("Yay, you were able to register! 😉");
+  }
+  else if (msg.type == "loginFailure"){
+    alert("Login failed. Reason: "+msg.reason)
+  }
+  else if (msg.type == "loginSuccess"){
+    alert("Yay, you were able to login! 😉");
+    window.location.replace("profile.html");
+  }
+
+  
+});
+
+
+
+/*
 function hash(inp) {
     return inp;
 }
@@ -86,5 +149,6 @@ function profile() {
 	    document.querySelectorAll('p')[6].innerHTML = "<strong>Username:</strong> "+username;
 	}
 }
+*/
+// THANK YOU SO MUCH NATHAN!!! :))))) Nvm his code got replaced LOLOLOLOLOL
 
-// THANK YOU SO MUCH NATHAN!!! :)))))
