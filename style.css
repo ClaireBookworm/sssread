@@ -78,11 +78,8 @@ text-align: center; margin-left: 0; margin-right: 0; padding-left: 46%; padding-
 }
 .indexfooterlink {
   color: white;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin-left: 44%;
-  margin-right: 44%;
+  text-align: center;
+  padding-left: 43%;
   padding-bottom: 0;
 }
 .indexfooterlink:hover {
@@ -274,3 +271,4 @@ text-align: center; margin-left: 0; margin-right: 0; padding-left: 46%; padding-
 }
 
 /* Pb idyrulwh Glvqhb prylh...Ndwh lv Wdqjohg; Vrskld lv Iurchq, Wrb Vwrub, Wdqjohg. */
+
