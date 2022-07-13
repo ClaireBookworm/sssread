@@ -19,8 +19,7 @@
 // btw i have no idea who those two people are maybe K and V...or K and C...or C and V *shrugs* - sophia
 
 function click() {
-  window.history.back();
-        
+  history.back();    
 };
 
 let ws = new WebSocket(location.origin.replace(/^http/, 'ws'));
