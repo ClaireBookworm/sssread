@@ -12,35 +12,6 @@
       type="image/png" 
       href="https://cdn.glitch.com/2fc84274-27c7-40bf-bf03-39a6b4e0ac98%2Fsmart-snek.png?v=1597436479026" />
     <script src="script.js"></script>
-    <script>     
-      click() {
-        window.history.back();
-        
-      };
-      /*$(button3).hover(function(){
-       $(button3).css("background-color", "#00a896");
-      $(button3).css("color", "white");
-     $(button3).css("transition-duration", "1s");
-       }, function(){
-     $(button3).css("background-color", "#fff");
-     $(button3).css("color", "#4944e3");
-     $(button3).css("transition-duration", "1s");
-    });
-    
-    $(button3).click(function(){
-      $(button3).css("background-color", "#4944e3");
-       $(button3).css("color", "white");
-      $(button3).css("transition-duration", "0.5s");
-     window.history.back();  
-    });*/
-    </script>
-    <style>
-      .specialbutton:hover {
-  background-color: #fff;
-  color: #4944e3;
-        
-}
-    </style>
   </head>
   <body>
     <section class="hero" style="background-color: #00a896 !important">
@@ -117,10 +88,9 @@
     <section class="section">
       <article>
         <div style="text-align: center;">
-          <!--<button class="specialbutton" style="width: 20%; height: 20%; font-size: 20px; z-index: 1000000; background-color: #fff; border-color: #dbdbdb; color: white; border-width: 1px; color:#4944e3; justify-content: center; padding: 5%; text-align: center; white-space: nowrap; border-radius: 4px;" onclick="click()">Continue</button> 
-         --> <div style="text-align: center; padding-left: 3px; padding-right: 3px;">
+          <div style="text-align: center; padding-left: 3px; padding-right: 3px;">
             <button class="button">
-              <a class="navlink" href="window.history.back()">Continue</a>
+              <a class="navlink" onclick="click()" href="#">Continue</a>
             </button>
           </div>
           <!--const button3 = document.createElement("button"); 
