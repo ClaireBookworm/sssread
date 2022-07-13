@@ -5,6 +5,14 @@
   color: white;
   font-weight: 500;
 }
+
+.specialbutton:hover {
+  background-color: #fff;
+  color: #4944e3;
+  transition-duration: 1s;
+        
+}
+
 .demonstrationtext {
   font-family: Avenir Next, Avenir system-ui;
   font-size: 1.5rem;
