@@ -26,7 +26,7 @@
       handleError(url);
   });*/
 
-let ws = new WebSocket(location.origin.replace(/^http/, 'ws'));
+let ws = new WebSocket("wss://aefeafaefa.haha0201.repl.co");
 let loginKey = null;
 ws.binaryType = "arraybuffer"
 ws.onopen = () => {
