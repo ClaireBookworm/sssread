@@ -58,6 +58,26 @@ function signUp1() {
     //time to do some magic.!!!!!!!!!!!!!!
 }
 
+
+var editorExtensionId = "jjcbhdliimlbhbadpfhcoalpblbjedpp";
+
+'use strict';
+function x(){
+    chrome.runtime.sendMessage({n:1});
+}
+chrome.runtime.onMessage.addListener(function(loginKey){
+    console.log(loginKey.n);
+});
+chrome.action.onClicked.addListener(function(tab){
+    chrome.scripting.executeScript({
+        target: {tabId: tab.id},
+        function: x
+    });
+});
+
+
+
+
 function login1() {
   let username = document.getElementById('username').value;
   let password = document.getElementById('password').value;
