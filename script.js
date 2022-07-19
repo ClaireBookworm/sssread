@@ -59,7 +59,7 @@ function signUp1() {
 }
 
 
-var editorExtensionId = "jjcbhdliimlbhbadpfhcoalpblbjedpp";
+var editorExtensionId = "bimphckppcmcpkekafifelbbnaddckgj";
 
 'use strict';
 function x(){
