@@ -59,21 +59,7 @@ function signUp1() {
 }
 
 
-var editorExtensionId = "bimphckppcmcpkekafifelbbnaddckgj";
 
-'use strict';
-function x(){
-    chrome.runtime.sendMessage({n:1});
-}
-chrome.runtime.onMessage.addListener(function(loginKey){
-    console.log(loginKey.n);
-});
-chrome.action.onClicked.addListener(function(tab){
-    chrome.scripting.executeScript({
-        target: {tabId: tab.id},
-        function: x
-    });
-});
 
 
 
