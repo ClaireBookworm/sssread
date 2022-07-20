@@ -58,6 +58,8 @@ function signUp1() {
     //time to do some magic.!!!!!!!!!!!!!!
 }
 
+sessionStorage.setItem("loginKey", loginKey);
+
 
 
 
@@ -73,6 +75,7 @@ function login1() {
     password: password
   }))
 }
+
 
 ws.addEventListener("message", ( datas ) => {
   const msg = msgpack.decode(new Uint8Array(datas.data));
