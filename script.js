@@ -62,7 +62,7 @@ function signUp1() {
     //time to do some magic.!!!!!!!!!!!!!!
 }
 
-sessionStorage.setItem("loginKey", loginKey);
+
 
 
 
