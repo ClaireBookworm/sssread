@@ -18,11 +18,7 @@
 
 // btw i have no idea who those two people are maybe K and V...or K and C...or C and V *shrugs* - sophia
 
-var editorExtensionId = "oendekmpdaaepnnonbppbpcmhjjdnign";
 
-chrome.runtime.sendMessage(editorExtensionId, {message: "hi"}, (response) => {
-  console.log(response.message);
-}); 
 
 /*chrome.runtime.sendMessage(editorExtensionId, {openUrlInEditor: url},
   function(response) {
