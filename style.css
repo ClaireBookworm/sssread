@@ -29,6 +29,15 @@ text-align: center; margin-left: 0; margin-right: 0;
   transition: 0.7s;
   color: #00A896;
 }
+
+.questionslink2 {
+  color: #4944e3;
+}
+.questionslink2:hover {
+  transition: 0.7s;
+  color: #00A896;
+}
+
 .button:hover {
   background-color: #00A896;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
