@@ -12,6 +12,21 @@
       type="image/png" 
       href="https://cdn.glitch.com/2fc84274-27c7-40bf-bf03-39a6b4e0ac98%2Fsmart-snek.png?v=1597436479026" />
     <script src="script.js"></script>
+	  <style>
+		  .videoidea {
+  /*border: 10px solid;
+  border-radius: 25px;
+  -webkit-animation: border 5s infinite;
+  animation: border 5s infinite; */
+  -webkit-transition: width 0.6s;
+  transition-timing-function: ease-in-out;
+}
+
+.videoidea:hover {
+  transition-timing-function: ease-in-out;
+  width: 55%;
+}
+	  </style>
   </head>
   <body>
     <section class="hero" style="background-color: #00a896 !important">
@@ -98,7 +113,7 @@
       </article>
       <br />
       <article style="margin-left: auto; margin-right: auto; text-align: center;">
-        <video controls>
+        <video controls width="50%;" class="videoidea">
           <source src="https://cdn.glitch.com/2fc84274-27c7-40bf-bf03-39a6b4e0ac98%2FSnakespeare%20Design%20Evolution.mp4?v=1597423845811" type="video/mp4">
           Oh no! Your browser does not support this video 😢. Please attempt using a different browser.
         </video>
