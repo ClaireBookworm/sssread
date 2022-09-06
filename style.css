@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+
 .title-head {
   font-size: 5rem !important;
   text-align: center;
-  font-family: Futura, Poppins, Avenir system-ui;
+  font-family: Futura, 'Rowdies', Avenir system-ui;
   color: white;
   font-weight: 500;
 }
