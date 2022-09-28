@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en" onload="profile()">
+	<head>
+    <title>Sssread | Your Personalized Profile</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
     />
-    <title>Sssread | Your Personalized Profile</title>
-    <meta charset="UTF-8" />
+    <script src="https://rawgit.com/kawanet/msgpack-lite/master/dist/msgpack.min.js"></script>
     <link rel="icon" 
       type="image/png" 
       href="https://cdn.glitch.com/2fc84274-27c7-40bf-bf03-39a6b4e0ac98%2Fsmart-snek.png?v=1597436479026" />
-    <script src="script.js"></script>
-  </head>
+	</head>
   <body>
     <section class="hero" style="background-color: #00a896 !important">
       <div class="hero-body">
@@ -92,33 +91,34 @@
           </ul>
       </nav>
     <br />
-    <section class="section"><div style="text-align: center;"><article>
-		<p class="blurb" style="text-align: center;">This page is still under construction - continue at your own rissssk! ☠️</p></div>
+    <section>
           <p class="bookworm">Welcome to your Profile!</p>
           <p style="text-align: center; font-family: Avenir Next, Avenir system-ui; margin-top: 1.5%; margin-bottom: 3%; width: 50%; margin-left: 25%; margin-right: 25%;">Please don't navigate away from this page - you'll have to log in again, and while those little Snakespeare alerts are cute, they'll get a little tiring after you see them 20 times 😉</p>
          <div>
           <p class="encourage">Snakespeare Unlocked Avatar Choices</p>
-        </div>
-      
-	    <br />
+           <div id="unlockedAvatars">
+           </div>
+         </div>
 		    <div>
           <p class="encourage">Snakespeare Locked Avatar Choices</p>
+          <div id="lockedAvatars">
+           </div>
         </div>
 		    
         <div>
           <p class="encourage">Account Info and Goals</p>
         </div>
 	    <div style="text-align: center;">
-	    <a href="profile.html"><img src="https://cdn.glitch.com/17fec5d5-fed3-4acd-b301-15e6bd6609bb%2Fquestion-mark-circle-icon.png?v=1603815033796" style="width: 15%; height: 15%;"/></a>
+	    <img id="mainProfilePicture" src="./avatars/OG.webp" style="width: 15%; height: 15%; border: 5px solid #00A896; border-radius: 50%;"/>
 	    </div>
-		    <p style="margin-left: auto; margin-right: auto; text-align: center;"><strong>Username:</strong></p>
+		    <p style="margin-left: auto; margin-right: auto; text-align: center;" id="usernameInfo"><strong>Username:</strong></p>
 
-	<p style="margin-left: auto; margin-right: auto; text-align: center;"><strong>Customized Avatars:</strong> <button class="editing">(Edit)</button></p>
-	<p style="margin-left: auto; margin-right: auto; text-align: center;"><strong>Monthly Goal:</strong> <button class="editing">(Edit)</button></p>
-	    <p style="margin-left: auto; margin-right: auto; text-align: center;"><strong>Yearly Goal:</strong> <button class="editing">(Edit)</button></p>
-      <p style="margin-left: auto; margin-right: auto; text-align: center;"><strong>Total Words Read:</strong></p>
-      <p style="margin-left: auto; margin-right: auto; text-align: center;"><strong>Percentage of Yearly Goal Complete:</strong></p>
-      <p style="margin-left: auto; margin-right: auto; text-align: center;"><strong>Percentage of Monthly Goal Complete:</strong></p>
+
+	<p style="margin-left: auto; margin-right: auto; text-align: center;" id="monthlyGoalInfo"><strong>Monthly Goal:</strong> <button class="editing">(Edit)</button></p>
+	    <p style="margin-left: auto; margin-right: auto; text-align: center;" id="yearlyGoalInfo"><strong>Yearly Goal:</strong> <button class="editing">(Edit)</button></p>
+      <p style="margin-left: auto; margin-right: auto; text-align: center;" id="totalWordsRead"><strong>Total Words Read:</strong></p>
+      <p style="margin-left: auto; margin-right: auto; text-align: center;" id="yearlyGoalPercentage"><strong>Percentage of Yearly Goal Complete:</strong></p>
+      <p style="margin-left: auto; margin-right: auto; text-align: center;" id="monthlyGoalPercentage"><strong>Percentage of Monthly Goal Complete:</strong></p>
 	    <br />
         <div>
           <p class="encourage">Settings</p>
@@ -126,7 +126,7 @@
 	            <div>
           <p style="margin-left: auto; margin-right: auto; text-align: center;"><a class="accountlink" href="">Change Password</a></p>
           <p style="margin-left: auto; margin-right: auto; text-align: center;"><a class="accountlink" href="">Change Username</a></p> 
-	    </div></article>
+        </div>
     </section>
 		<br />
 		<br />
@@ -138,6 +138,15 @@
           <a class="questionslink" href="mailto:sophia.m.mitchell@icloud.com?subject=Questions&nbsp;About&nbsp;Sssread">Questions?</a></div>
       </div>
     </section>
+	      <div id="alertBox" style="display:none">
+      <div id="centerVerticallyInAlert">
+        <h1 id="changeGoalText">Change your word goal:</h1>
+        <input maxlength=10 id="changeInput"></input>
+        <div>
+        <button id="changeInputButton">Finalize</button>
+      </div>
+    </div>
+    <script src="profile.js"></script>
   </body>
 </html>
 
