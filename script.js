@@ -17,21 +17,14 @@
 //yeah, I have no idea
 
 // btw i have no idea who those two people are maybe K and V...or K and C...or C and V *shrugs* - sophia
-
-
-
-/*chrome.runtime.sendMessage(editorExtensionId, {openUrlInEditor: url},
-  function(response) {
-    if (!response.success)
-      handleError(url);
-  });*/
-
 let ws = new WebSocket("wss://aefeafaefa.haha0201.repl.co");
 let loginKey = null;
 ws.binaryType = "arraybuffer"
 ws.onopen = () => {
   console.log("WS OPENED")
 }
+
+loginKey = localStorage.getItem("token");
 
 function signUp1() {
   let emailValue = document.getElementsByName("email")[0].value;
@@ -58,24 +51,16 @@ function signUp1() {
     //time to do some magic.!!!!!!!!!!!!!!
 }
 
-
-
-
-
-
-
-
-
 function login1() {
   let username = document.getElementById('username').value;
   let password = document.getElementById('password').value;
   ws.send(msgpack.encode({
     type: "login",
     username: username,
-    password: password
+    password: password,
+    keep: true
   }))
 }
-
 
 ws.addEventListener("message", ( datas ) => {
   const msg = msgpack.decode(new Uint8Array(datas.data));
@@ -84,12 +69,17 @@ ws.addEventListener("message", ( datas ) => {
   }
   else if (msg.type == "registerSuccess"){
     alert("Yay, you were able to register! 😉");
+	  let key = msg.key
+    localStorage.setItem('token', key)
+    window.location.replace("profile.html");
   }
   else if (msg.type == "loginFailure"){
     alert("Login failed. Reason: "+msg.reason)
   }
   else if (msg.type == "loginSuccess"){
     alert("Yay, you were able to login! 😉");
+	  let key = msg.key;
+    localStorage.setItem('token', key)
     window.location.replace("profile.html");
   }
 
