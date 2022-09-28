@@ -149,13 +149,14 @@ function updateProfile(data){
 }
 
 button = document.getElementById("changeInputButton")
+alerting = document.getElementById("alertBox")
 
 button.addEventListener('mouseover', () => {
      button.style.backgroundColor = 'black';
      button.style.color = 'white';
      button.style.transform = 'scale(1.3)';
 
-     //document.querySelector('div').style.backgroundColor = '#bf6856';
+     alertingdiv.style.backgroundColor = '#bf6856';
     });
 
      button.addEventListener('mouseleave', () => {
@@ -163,5 +164,5 @@ button.addEventListener('mouseover', () => {
          button.style.color = 'black';
          button.style.transform = 'scale(1)';
 
-        // document.querySelector('div').style.backgroundColor = '#00A896';
+       alertingdiv.style.backgroundColor = '#00A896';
      });
