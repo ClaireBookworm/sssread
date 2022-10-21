@@ -1,4 +1,4 @@
-let ws = new WebSocket("wss://aefeafaefa.haha0201.repl.co");
+let ws = new WebSocket("wss://sssread-backend.glitch.me");
 ws.binaryType = "arraybuffer"
 
 let editingValue = "monthly";
