@@ -17,7 +17,7 @@
 //yeah, I have no idea
 
 // btw i have no idea who those two people are maybe K and V...or K and C...or C and V *shrugs* - sophia
-let ws = new WebSocket("wss://aefeafaefa.haha0201.repl.co");
+let ws = new WebSocket("wss://sssread-backend.glitch.me");
 let loginKey = null;
 ws.binaryType = "arraybuffer"
 ws.onopen = () => {
